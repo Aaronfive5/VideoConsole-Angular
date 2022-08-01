@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row mt-3">
+        <!-- Team Member 1 -->
+        <div class="col-4">
+            <div class="card border-0 shadow">
+                <img src="{{ consola.foto }}" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0">{{consola.nombre}}</h5>
+                    <div class="card-text text-black-50">{{consola.fechaLanzamiento}}</div>
+                </div>
+            </div>
+        </div> <!-- fin col-4 -->
+        <div class="col-8">
+
+            <h2>Videojuegos Lanzados</h2>
+
+            <div class="row">
+                <div class="col-4" *ngFor="let Catalogo of consola.catalogo">
+
+                    <app-catalogo [catalogo]="Catalogo"></app-catalogo>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

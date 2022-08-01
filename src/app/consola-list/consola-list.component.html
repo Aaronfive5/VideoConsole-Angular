@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./consola-list.component.css">
+<div class="row ">
+    <div class="col-4 mt-3" *ngFor="let con of consola">
+
+        <div class="card mx-auto d-block shadow card-personalizada">
+            <img src="{{con.foto}}" class="card-img-top" style="height: 200px">
+            <div class="card-body">
+                <h5 class="card-title">{{con.nombre}}</h5>
+                <p class="card-text">fecha de lanzamiento: <span class="fw-bold">{{con.fechaLanzamiento}}</span></p>
+                <a routerLink="/consola/{{con.id}}" class="btn btn-dark">
+                    <i class="fa-solid fa-folder-open"></i> Ver Catálogo</a>
+            </div>
+        </div>
+    </div>
+
+</div>
